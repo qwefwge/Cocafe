@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Backgrounds - Cool Whites */
+  --color-cream-50: #FFFFFF;
+  --color-cream-100: #F8FAFC;
+  --color-cream-200: #E2E8F0;
+  
+  /* Primary - Navy Blue Scale (#1a3965) */
+  --color-coffee-50: #F0F4F8;
+  --color-coffee-100: #D9E2EC;
+  --color-coffee-200: #BCCCDC;
+  --color-coffee-300: #9FB3C8;
+  --color-coffee-400: #829AB1;
+  --color-coffee-500: #627D98;
+  --color-coffee-600: #334E68;
+  --color-coffee-800: #1a3965;
+  --color-coffee-900: #102A43;
+
+  /* Accent - Crimson Red (#b20838) */
+  --color-crimson-50: #FFF0F3;
+  --color-crimson-100: #FFE0E6;
+  --color-crimson-500: #b20838;
+  --color-crimson-600: #8f062d;
+  
+  /* Status */
+  --color-green-500: #27AB83;
+  --color-green-600: #1F8B6A;
+  --color-orange-400: #F2C94C;
+}
+
+@layer base {
+  body {
+    @apply bg-cream-50 text-coffee-800 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-hand;
+  }
+}
+
+.handwritten {
+  font-family: var(--font-hand);
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-coffee-500/20 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-coffee-500/40;
+}
